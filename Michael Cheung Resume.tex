@@ -1,0 +1,241 @@
+
+
+\documentclass[letterpaper,12pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{linkcolor}{rgb}{0,0,0.7}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\link}[2]{\href{#1}{\textcolor{black}{#2}}}
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{\sc #1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & #2 \\
+			\textbf{#3} & #4 \\
+	\end{tabular*}\vspace{-6pt}
+}
+\newcommand{\miniheading}[2]{
+	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & #2 \\
+	\end{tabular*}\vspace{-6pt}
+}
+
+
+
+\newcommand{\footnoteremember}[2]{
+\footnote{#2}
+\newcounter{#1}
+\setcounter{#1}{\value{footnote}}
+}
+\newcommand{\footnoterecall}[1]{
+\footnotemark[\value{#1}]
+}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\LARGE Michael Sze-Yu Cheung} & \link{mailto:Michael.SzeYu.Cheung@gmail.com}{Michael.SzeYu.Cheung@gmail.com}\\
+	{ {San Francisco, CA}} & {732-447-7767} \\
+\end{tabular*}
+\\
+\vspace{0.1in}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Technical Work History}
+	\begin{itemize}
+        \item \ressubheading
+			{Coyn}
+			{San Francisco, CA}
+			{Co-Founder}
+			{Apr 2018 -- Current}
+				
+            \begin{itemize}
+                \resitem{Analyzed live exchange rates while factoring in fees and other sources of market friction to identify arbitrage opportunities and execute secure trades}
+                \resitem{Bypassed QPS limitations to minimize data staleness by using a network of slaves}
+				\resitem{Designed robust fault tolerance, sanity checks, and error correction help us deal with slow, poorly designed, and buggy exchanges}
+				\resitem{Automated the provisioning and deployment process on AWS}
+				\resitem{Reported logs and metrics using Datadog to show investors volume, profit, activity, price slippage, disabled markets, and other information}
+				\resitem{Currently running monte carlo simulations to test strategies for trading short-term binary options on the forex market.}
+            \end{itemize}
+        \item \ressubheading
+			{\link{https://www.zenprospect.com/}{ZenProspect}}
+			{San Francisco, CA}
+			{Software Engineer}
+			{Mar 2017 -- Apr 2018}
+				\begin{itemize}
+					\resitem{Led a team of three engineers to develop a predictive scoring system that helps clients rank their most promising leads. The scores evolve in real time based on interactions with those leads and other customizable factors.}
+					\resitem{Handled engineering recruiting, making a key front-end hire that filled a major skill gap in our team.}
+					\resitem{Integrated bi-directional sync with HubSpot and handled OAuth, permissions, rate limiting, errors, and retries. Increased sales and retention with users of HubSpot.}
+				\end{itemize}
+        \item \ressubheading
+            {\link{https://www.google.com/}{Google Inc. - YouTube Rights Management}}
+            {Mountain View, CA}
+            {Software Engineer}
+            {Feb 2015 -- Mar 2017}
+                \begin{itemize}
+                    \resitem{Developed a caching system for a critical data serving platform, which reduced CPU usage by 75\%}
+                    \resitem{Migrated a pipeline used to classify intellectual property, from using a rigid data model stored in Bigtable, to a more flexible and error-correcting model stored in Spanner.}
+                    \resitem{Completed several MapReduces to rectify bad metadata, which saved one of our partners (among many) 30 hours / week of corrective work}
+                \end{itemize}
+		\item \ressubheading
+            {\link{http://www.cse.lehigh.edu/}{Lehigh University - InSyTe Laboratory}}
+            {Bethlehem, PA}
+            {Student Researcher}
+            {Aug 2013 -- Dec 2014}
+				\begin{itemize}
+					\resitem{Created an intelligent agent based on \link{http://www.cse.lehigh.edu/~munoz/projects/GDA/}{Goal Driven Autonomy} for a game involving iRobot Creates}
+				\end{itemize}
+               
+        \item \ressubheading
+            {\link{http://www.nrl.navy.mil/}{Naval Research Laboratory - Applied Artificial Intelligence}}
+            {Washington, DC}
+            {\link{http://nreip.asee.org/}{NREIP}}
+            {May 2014 -- Aug 2014}
+				\begin{itemize}
+                    \resitem{Developed intelligent control systems for autonomous underwater vehicles}
+                \end{itemize}
+		\item \ressubheading
+            {\link{http://educ.jmu.edu/~vanwykla/reu/}{James Madison University}}
+            {Harrisonburg, VA}
+            {Research Experiences for Undegraduates}
+            {June 2012 -- Aug 2012}
+				\begin{itemize}
+					\resitem{Proved Rota's Basis Conjecture for matroids of rank 4 (a new result) by pruning cases and generating an exhaustive computational proof}
+                    %\resitem{Pruned cases that could be efficiently inferred from already proven cases by looking for superset cases, permutations, and by analyzing an exchange graph}
+                    %\resitem{Used heuristics when branching into cases to choose the case that was most likely to be solved with less branching and result in more case elimination after being solved}
+                \end{itemize}
+		\item \ressubheading
+            {\link{http://www.lanl.gov}{Los Alamos National Laboratory - EES-16}}
+            {Los Alamos, NM}
+            {Computational Earth Scientist}
+            {Jan 2011 -- June 2011}
+				\begin{itemize}
+					\resitem{Developed the NRAP-IAM-CS viewer, which reads data from multiple simulation formats and generates highly customizable animations, graphs, and debugging information. It has been vital to understanding, presenting, and debugging simulations and is still extensively used and maintained to this day, eight years later.}
+					%\resitem{Designed and tested simulations of carbon sequestration sites}
+					%\resitem{Worked with scientists at \link{http://www.lbl.gov/}{Lawrence Berkeley National Laboratory} on mesh generation for the \link{http://ascemdoe.org/}{ASCEM project}}
+					\resitem{Collaborated with scientists from the \link{http://www.wsgs.uwyo.edu/}{Wyoming State Geological Survey} to develop carbon sequestration models of the \link{http://www.wsgs.uwyo.edu/research/stratigraphy/RockSpringsUplift/Default.aspx}{Rock Springs Uplift site}}
+				\end{itemize}
+	\end{itemize}
+	
+	
+	\resheading{Independent Projects}
+    \begin{itemize}
+        \item \miniheading{Algorithmic Trading Using Arbitrage}{Oct 2013 - Current}
+        \item \miniheading{Intelligent Agents with Computer Vision}{Oct 2014 - June 2016}
+            \begin{itemize}
+                \resitem{Developed an intelligent agent that trains troops, attacks bases, and gracefully handles disconnection and forced breaks using a computer vision based behavioral model}
+                %\resitem{Agent sends text notifications when encountering an error or an unknown state}
+                %\resitem{Used template matching to estimate the capacity and fullness of each resource storage}
+                %\resitem{Reported the vulnerability and recommended random perturbations on the sprites to make template matching infeasible}
+                \resitem{Generalized the behavioral model developed for the mobile game to create an intelligent agent that navigates and completes online surveys of varying formats}
+            \end{itemize}
+        \item \miniheading{Intelligent Web Agent and Data Normalization}{Dec 2011 - April 2012}
+            \begin{itemize}
+                \resitem{Developed an intelligent web agent for a browser game that uses reinforcement learning algorithm to find optimal farming targets}
+                %\resitem{Bypassed bot protection by texting the CAPTCHA to my phone, then using my response to fill in the result}
+                \resitem{Generalized the text analysis libraries developed for the browser game to extract and normalize data from an elephant catalog with inconsistent data presentation, saving 50 hours of tedious work}
+            \end{itemize}
+        \item \miniheading{Physics Simulations with 3D Visualization}{Mar 2011 - May 2011}
+            \begin{itemize}
+                \resitem{N-body simulation with gravity and collisions, finite element heat transfer}
+            \end{itemize}
+        \item \miniheading{Intelligent Agent in MMORPG}{Feb 2011 - Sep 2013}
+            \begin{itemize}
+                \resitem{Developed a computer vision algorithm to track the position of the player on the map}
+                \resitem{Developed an intelligent agent that attacks enemies, retrieves loot, navigates maps, conducts transactions, interacts with NPCs, and avoids other players}
+                %\resitem{Reported the vulnerability and recommended changes to the minimap to patch this exploit}
+            \end{itemize}
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+	\begin{itemize}
+        \item \ressubheading
+            {\link{http://www.cse.lehigh.edu/}{Lehigh University}}
+            {Bethlehem, PA}
+            {Fellowship in Computer Science}
+            {August 2013 - December 2014}
+                \begin{itemize}
+                    \resitem{GPA: 3.90/4.00}
+                \end{itemize}
+        \item \ressubheading
+            {\link{http://www.etown.edu}{Elizabethtown College}}
+            {Elizabethtown, PA}
+            {BS in Mathematics and Physics}
+            {August 2009 - May 2013}
+                \begin{itemize}
+                    \resitem{GPA: 3.94/4.00}
+                \end{itemize}	
+	\end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+	\begin{itemize}
+		\resitem{\textbf{Programming Languages}: Java, Kotlin, Ruby, C++, Python, Javascript}
+		\resitem{\textbf{Frameworks}: React, Redux, Ruby on Rails}
+        \resitem{\textbf{Technologies}: AWS (EC2, S3, CodePipeline), MongoDB, ElasticSearch, Protocol Buffers, BigTable, Spanner, MapReduce, Flume}
+	\end{itemize} % End Skills list
+    
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Everything after here ignored
+%%%%%%%%%%%%%%%%%%%%%%%%
+    
+\resheading{Technical Courses}
+	\begin{itemize}
+        \resitem{\textbf{Computer Science Graduate Courses}: Parallel Computing, Pattern Recognition, Theory of Computation, Advanced Programming Methods, Advanced Algorithms}
+		\resitem{\textbf{Computer Science Undergraduate Courses}: Computer Security, Computer Organization and Architecture, Database Systems, Algorithms and Data Structures, Computer Science I-II}
+		\resitem{\textbf{Mathematics Undergraduate Courses}: Cryptological Mathematics, Topology, Real Analysis, Differential Equations, Linear Algebra, Theory of Probability, Abstract Algebra, Calculus I-III, Proofs, Statistics, Mathematica}
+		\resitem{\textbf{Physics Undergraduate Courses}: Quantum Mechanics, General Relativity, Electromagnetism, Dynamics, Signals and Systems, Meteorology, Modern Physics, College Physics I-III}
+	\end{itemize}
+	
+\resheading{Awards, Certificates, and Fellowships}
+	\begin{itemize}
+		\item \miniheading{Lehigh University Dean's Fellowship}{August 2013 - May 2014}
+		\item \miniheading{Hager Scholar in Physics and Engineering}{Awarded May 4, 2012}
+		\item \miniheading{Emergent Scholar}{Awarded August, 2011}
+		\item \miniheading{\link{http://www.pme-math.org/}{Pi Mu Epsilon National Mathematics Honor Society}}{Initiated Spring of 2011}
+		\item \miniheading{\link{http://www.nationalald.org/}{Alpha Lambda Delta National Academic Honor Society}}{Initiated March 28, 2010}
+	\end{itemize}
+
+\resitem{Math Courses: Cryptological Mathematics, Calculus I-III\footnoteremember{challengetest}{Challenge tested out of Calculus II, Proofs, Differential Equations, College Physics II, Modern Physics, and Algorithms and Data Structures; Computer Science II waived (not available on transcript)}, Linear Algebra, Proofs\footnoterecall{challengetest}, Statistics, Mathematica, Theory of Probability, Abstract Algebra, Differential Equations\footnoterecall{challengetest}, Real Analysis, Topology}
+		\resitem{Physics Courses: Meteorology, College Physics I-III\footnoterecall{challengetest}, Modern Physics\footnoterecall{challengetest}, Quantum Mechanics, Electromagnetism, Dynamics, Signals and Systems}
+		\resitem{Computer Science Courses: Computer Science I-II\footnoterecall{challengetest}, Algorithms and Data Structures\footnoterecall{challengetest}, Computer Security, Computer Organization and Architecture, Database Systems}
