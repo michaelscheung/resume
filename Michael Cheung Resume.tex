@@ -5,6 +5,8 @@
 %-----------------------------------------------------------
 \usepackage{latexsym}
 \usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[empty]{fullpage}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
@@ -25,6 +27,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 \def\topitemize{10pt}
+
+% Fonts
+%\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serif
+%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -137,9 +144,9 @@
 	
 	\resheading{Independent Projects}
     \begin{itemize}[leftmargin=\topitemize,label={}]
-		\resitem{Created a food web simulation to test a variety of predator/prey strategies, including hard coded, reinforcement learning, and neural net strategies. (2017-2018)}
+		\resitem{Created a food web simulation to test a variety of predator/prey strategies, including hard coded, reinforcement learning, and neural net strategies (2017-2018)}
 		\resitem{Developed an intelligent agent that uses computer vision to play a mobile game (2014-2017)}
-		\resitem{Used computer vision to navigate players and track enemies in a multiplayer game (2011-2013)}
+		\resitem{Used computer vision to navigate and track entities in a multiplayer game (2011-2013)}
 		\resitem{Created a Q-learning agent that continuously tests and optimizes attack targets (2012)}
     \end{itemize}
 
