@@ -1,2 +1,2 @@
-pdflatex "Michael Cheung Resume"
+xelatex "Michael Cheung Resume"
 pause
