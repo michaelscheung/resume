@@ -5,13 +5,15 @@
 %-----------------------------------------------------------
 \usepackage{latexsym}
 \usepackage{enumitem}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[empty]{fullpage}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{xcolor}
-\usepackage[pdftex]{hyperref}
+\usepackage{hyperref}
 \hypersetup{
     colorlinks,%
     citecolor=black,%
@@ -21,6 +23,7 @@
 }
 \urlstyle{same}
 \definecolor{mygrey}{gray}{.85}
+\definecolor{dark-gray}{RGB}{100,100,100}
 \definecolor{linkcolor}{rgb}{0,0,0.7}
 \textheight=9.0in
 \raggedbottom
@@ -29,9 +32,16 @@
 \def\topitemize{10pt}
 
 % Fonts
-%\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
-%% only if the base font of the document is to be sans serif
-%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+%\usepackage[defaultfam,tabular,lining]{montserrat} %% Option
+\newfontfamily\calibrifont{Calibri}
+\newfontfamily\cambriafont{Cambria}
+\newfontfamily\georgiafont{Georgia}
+\newfontfamily\montserratfontthin{Montserrat}
+
+\newenvironment{calibri}{\calibrifont}{\par}
+\newenvironment{cambria}{\cambriafont}{\par}
+\newenvironment{georgia}{\georgiafont}{\par}
+\newenvironment{montserrat}{\montserratfont}{\par}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -45,7 +55,16 @@
 \newcommand{\link}[2]{\href{#1}{\textcolor{black}{#2}}}
 \newcommand{\noitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{\sc #1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resheading}[1]{{
+	\large \colorbox{mygrey}{
+		\begin{minipage}{\textwidth}{
+			\begin{calibri}
+				\textcolor{dark-gray}{\textsc{#1}}
+				 \vphantom{p\^{E}}
+			\end{calibri}
+		}\end{minipage}
+	}
+}}
 \newcommand{\ressubheading}[4]{
 	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
 			\textbf{#1} & #2 \\
@@ -80,8 +99,8 @@
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-	\textbf{\LARGE Michael Sze-Yu Cheung} & \link{mailto:Michael.SzeYu.Cheung@gmail.com}{Michael.SzeYu.Cheung@gmail.com}\\
-	{ {San Francisco, CA}} & {732-447-7767} \\
+	\textbf{\Large Michael Cheung} & \link{mailto:michael.szeyu.cheung@gmail.com}{michael.szeyu.cheung@gmail.com}\\
+	{{San Francisco, CA}} & {732-447-7767} \\
 \end{tabular*}
 \\
 \vspace{0.1in}
