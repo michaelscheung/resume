@@ -4,6 +4,7 @@
 
 %-----------------------------------------------------------
 \usepackage{latexsym}
+\usepackage{enumitem}
 \usepackage[empty]{fullpage}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
@@ -23,6 +24,7 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\def\topitemize{10pt}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -34,6 +36,7 @@
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\link}[2]{\href{#1}{\textcolor{black}{#2}}}
+\newcommand{\noitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{\sc #1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
@@ -79,7 +82,7 @@
 %%%%%%%%%%%%%%%%%%%%%%
 
 \resheading{Technical Work History}
-	\begin{itemize}
+	\begin{itemize}[leftmargin=\topitemize,label={}]
         \item \ressubheading
 			{Coyn}
 			{San Francisco, CA}
@@ -133,23 +136,23 @@
 	
 	
 	\resheading{Independent Projects}
-    \begin{itemize}
+    \begin{itemize}[leftmargin=\topitemize,label={}]
 		\resitem{Created a food web simulation to test a variety of predator/prey strategies, including hard coded, reinforcement learning, and neural net strategies. (2017-2018)}
 		\resitem{Developed an intelligent agent that uses computer vision to play a mobile game (2014-2017)}
-		\resitem{Designed a computer vision algorithm to track entity positions in an MMORPG (2011-2013)}
+		\resitem{Used computer vision to navigate players and track enemies in a multiplayer game (2011-2013)}
 		\resitem{Created a Q-learning agent that continuously tests and optimizes attack targets (2012)}
     \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
-	\begin{itemize}
+	\begin{itemize}[leftmargin=\topitemize,label={}]
 		\resitem{\textbf{Programming Languages}: Java, Kotlin, Ruby, C++, Python, Javascript}
 		\resitem{\textbf{Frameworks/Tech}: React, Redux, AWS (EC2, S3, CodePipeline), SQL, NoSQL, Rails, MongoDB, ElasticSearch, Datadog, Protobufs, BigTable, Spanner, MapReduce, Flume}
 	\end{itemize} % End Skills list
 
 %%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
-	\begin{itemize}
+	\begin{itemize}[leftmargin=\topitemize,label={}]
         \item \miniheading
             {\link{http://www.cse.lehigh.edu/}{Lehigh University} - Fellowship in Computer Science - 3.90/4.00}
             {2013 - 2014}
