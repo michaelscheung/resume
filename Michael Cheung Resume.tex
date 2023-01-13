@@ -76,6 +76,12 @@
 			\textbf{#1} & #2 \\
 	\end{tabular*}\vspace{-6pt}
 }
+\newcommand{\tripleheading}[3]{%
+%	\par\medskip\noindent
+	\makebox[6.8in][s]{\rlap{\textbf{#1}}\hfill\textbf{#2}\hfill\llap{\textbf{#3}}}%
+	\vspace{-2mm}
+%	\par\medskip
+}
 
 
 
@@ -109,67 +115,59 @@
 
 \resheading{Technical Work History}
 	\begin{itemize}[leftmargin=\topitemize,label={}]
-        \item \miniheading
-			{Self-Employed - Algorithmic Trader}
-			{December 2020 -- Current}
-				
-            \begin{itemize}
+		\item \tripleheading
+			{BlockView}
+			{Founder}
+			{December 2021 -- Current}
+			\begin{itemize}
+				\resitem{Designed a distributed static analysis on billions of source code files to deliver business insights and provide real-time alerts on suspicious activity}
+				\resitem{Ensured business, file system, and RAID level data integrity level of a 40 TB database and its ETL data sources, with regular backup and disaster recovery plans}
+			\end{itemize}
+		\item \tripleheading
+			{Antebauer LLC}
+			{Founder}
+			{Apr 2018 -- Current}
+			\begin{itemize}
+				\resitem{Used natural language processing to extract price signals from social media sources}
 				\resitem{Developed high fidelity exchange simulations to test high-frequency trading strategies}
-                %\resitem{Employed machine learning risk management strategies to engage in high-risk high-reward trades that are neglected by more conservative market makers and arbitrageurs}
-                \resitem{Optimized network latency to achieve millisecond level trade execution}
-            \end{itemize}
-        
-        
-        \item \ressubheading
-			{Coyn Systems}
-			{San Francisco, CA}
-			{Co-Founder \& CTO}
-			{Apr 2018 -- December 2018}
-				
-            \begin{itemize}
-				%\resitem{Executed market making and arbitrage strategies}
-				\resitem{Designed a real-time price graph driven by a high-throughput layer of networked relays}
-				\resitem{Generated real time metric visualizations (e.g. volume, profit, slippage) for investors}
+				\resitem{Generated real time metric visualizations (volume, profit, slippage, etc.) for investors}
 				\resitem{Implemented continuous deployment and automated provisioning on AWS}
-            \end{itemize}
-        \item \ressubheading
+			\end{itemize}
+		\item \tripleheading
 			{\link{https://www.apollo.io/}{Apollo.io}}
-			{San Francisco, CA}
 			{Software Engineer}
 			{Mar 2017 -- Apr 2018}
-				\begin{itemize}
-					\resitem{Led a team of engineers to develop a predictive scoring system that ranks companies by how likely they will close a deal with our clients}
-					\resitem{Handled candidate sourcing, conducted interviews, and streamlined outreach methodology; recruited a key engineer who filled a major skill gap on our team}
-					\resitem{Increased sales and retention by syncing client data with Salesforce and HubSpot}
-				\end{itemize}
-        \item \ressubheading
-            {\link{https://www.google.com/}{Google}}
-            {Mountain View, CA}
-            {Software Engineer}
-            {Feb 2015 -- Mar 2017}
-                \begin{itemize}
-                    \resitem{Reduced CPU usage by 75\% by caching a critical data serving platform}
-                    \resitem{Rectified corrupted metadata, saving key partners 30 hrs/week of work each}
-                \end{itemize}
-		       
-        \item \miniheading
-            {\link{http://www.nrl.navy.mil/}{Naval Research Lab} - AI Research Intern}
-            {May 2014 -- Aug 2014}
-				\begin{itemize}
-                    \resitem{Developed intelligent control systems for autonomous underwater vehicles}
-               \end{itemize}
-		\item \miniheading
-            {\link{http://www.lanl.gov}{Los Alamos National Lab - Earth Science Intern}}
-            {Jan 2011 -- June 2011}
-				\begin{itemize}
-					\resitem{Developed a post-processing tool for debugging, interpreting, and visualizing simulations: a tool that is still being used and maintained to this day.}
+			\begin{itemize}
+				\resitem{Led a team of engineers to develop a predictive scoring system that improved the success rate of our clients' outreach campaigns}
+				\resitem{Handled candidate sourcing, conducted interviews, and streamlined outreach methodology; recruited a key engineer who filled a major skill gap on our team}
+				\resitem{Increased sales and retention by syncing client data with Salesforce and HubSpot}
+			\end{itemize}
+		\item \tripleheading
+			{\link{https://www.google.com/}{Google}}
+			{Software Engineer}
+			{Feb 2015 -- Mar 2017}
+			\begin{itemize}
+				\resitem{Reduced CPU usage by 75\% by caching a critical data serving platform}
+				\resitem{Rectified corrupted metadata, saving key partners 30 hrs/week of work each}
+			\end{itemize}
+		\item \tripleheading
+			{\link{http://www.nrl.navy.mil/}{Naval Research Lab}}
+			{AI Research Intern}
+			{May 2014 -- Aug 2014}
+			\begin{itemize}
+				\resitem{Developed intelligent control systems for autonomous underwater vehicles}
+			\end{itemize}
+		\item \tripleheading
+			{\link{http://www.lanl.gov}{Los Alamos National Lab}}
+			{Earth Science Intern}
+			{Jan 2011 -- June 2011}
+			\begin{itemize}
+				\resitem{Developed a post-processing tool for debugging, interpreting, and visualizing simulations - a tool that is still being used and maintained to this day.}
 					%\resitem{Designed and tested simulations of carbon sequestration sites}
 					%\resitem{Worked with scientists at \link{http://www.lbl.gov/}{Lawrence Berkeley National Laboratory} on mesh generation for the \link{http://ascemdoe.org/}{ASCEM project}}
 					%\resitem{Collaborated with scientists from the \link{http://www.wsgs.uwyo.edu/}{Wyoming State Geological Survey} to develop carbon sequestration models of the \link{http://www.wsgs.uwyo.edu/research/stratigraphy/RockSpringsUplift/Default.aspx}{Rock Springs Uplift site}}
-				\end{itemize}
-	\end{itemize}
-	
-	
+			\end{itemize}
+		\end{itemize}		
 	\resheading{Independent Projects}
     \begin{itemize}[leftmargin=\topitemize,label={}]
 		\resitem{Created a food web simulation to test a variety of predator/prey strategies, including hard coded, reinforcement learning, and neural net strategies (2017-2018)}
@@ -180,8 +178,8 @@
 %%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
 	\begin{itemize}[leftmargin=\topitemize,label={}]
-		\resitem{\textbf{Programming Languages}: Kotlin, Java, Python, C++, Ruby, Javascript}
-		\resitem{\textbf{Frameworks/Tech}: React, Redux, AWS (EC2, S3, CodePipeline), Maven, SQL, NoSQL, Rails, MongoDB, ElasticSearch, Datadog, Protobufs, BigTable, Spanner, MapReduce, Flume}
+		\resitem{\textbf{Programming Languages}: Kotlin, Java, Python, Solidity, C++, Ruby, Javascript, Typescript, ANTLR, \LaTeX}
+		\resitem{\textbf{Frameworks/Tech}: MongoDB, Supervisord, mdadm, Debian-based Linux,  React, Redux, AWS (EC2, S3, Lambda), Gradle, Datadog, Web3J, Web3JS, Ethers JS}
 	\end{itemize} % End Skills list
 
 %%%%%%%%%%%%%%%%%%%%%%
